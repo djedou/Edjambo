@@ -21,14 +21,15 @@ Surtout en NextJS pour des raisons de SEO.
 1. [NextJS](https://nextjs.org/)
 1. [React-Redux](https://react-redux.js.org/)
 
-## Tester
-1. Basculer dans la branche developpement  
+## Tester 
 1. Cloner la branche de ce repo: `git clone https://github.com/djedou/Edjambo.git`  
 1. Se deplacer dans le dossier Edjambo: `cd Edjambo`  
+1. Se deplacer dans le dossier client: `cd client`  
 1. Effectuer les commandes suivantes:  
-   `cd client`  
+   `git checkout developpement`  
    `npm install`  
    `npm run dev`  
+   
 1. Saisisser l'adresse suivante dans votre navigateur: `localhost:3000`
 
 ## Status
