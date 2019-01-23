@@ -15,8 +15,6 @@ Pour améliorer et ajouter d'autres fonctionnalités au projet j'ai décidé de 
 Surtout en NextJS pour des raisons de SEO.
 
 ## Technologies
-1. [HTML5](https://www.w3.org/TR/html52/)
-1. [CSS](https://www.w3.org/Style/CSS/specs.fr.html)
 1. [ReactJS](https://reactjs.org/)
 1. [NextJS](https://nextjs.org/)
 1. [React-Redux](https://react-redux.js.org/)
@@ -30,11 +28,11 @@ Surtout en NextJS pour des raisons de SEO.
    `npm install`  
    `npm run dev`  
    
-1. Saisisser l'adresse suivante dans votre navigateur: `localhost:3000`
+1. Taper l'adresse suivante dans votre navigateur: `localhost:3000`
 
 ## Status
 En cours de develeppement.  
-J'y travaille dans mes temps libre
+J'y travaille dans mes temps libres
 ## Auteur
 Nom: Aman Djedou  
 Email: djedouarnaud.aman@gmail.com  
