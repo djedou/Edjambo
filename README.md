@@ -10,14 +10,13 @@ Un projet en NextJS
 
 
 ## Introduction
-Ce projet consiste à améliorer un projet que j'ai déjà réalisé en NodeJS (ExpressJS).  [Edjambo](https://notrebiencommun.org/)  
+Ce projet consiste à améliorer un projet que j'ai déjà réalisé en NodeJS (ExpressJS).  [Edjambo Notre Bien Commun](https://notrebiencommun.org/)  
 Pour améliorer et ajouter d'autres fonctionnalités au projet j'ai décidé de le refaire en ReactJS et NextJS  
 Surtout en NextJS pour des raisons de SEO.
 
 ## Technologies
 1. [ReactJS](https://reactjs.org/)
 1. [NextJS](https://nextjs.org/)
-1. [React-Redux](https://react-redux.js.org/)
 
 ## Tester 
 1. Cloner la branche de ce repo: `git clone https://github.com/djedou/Edjambo.git`  
