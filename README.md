@@ -19,7 +19,7 @@ Surtout en NextJS pour des raisons de SEO.
 1. [NextJS](https://nextjs.org/)
 
 ## Tester 
-1. Cloner la branche de ce repo: `git clone https://github.com/djedou/Edjambo.git`  
+1. Cloner le repo: `git clone https://github.com/djedou/Edjambo.git`  
 1. Se deplacer dans le dossier Edjambo: `cd Edjambo`  
 1. Se deplacer dans le dossier client: `cd client`  
 1. Effectuer les commandes suivantes:  
