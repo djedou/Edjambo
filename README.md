@@ -17,6 +17,7 @@ Surtout en NextJS pour des raisons de SEO.
 ## Technologies
 1. [ReactJS](https://reactjs.org/)
 1. [NextJS](https://nextjs.org/)
+1. [React-Redux](https://react-redux.js.org/)
 
 ## Tester 
 1. Cloner le repo: `git clone https://github.com/djedou/Edjambo.git`  
