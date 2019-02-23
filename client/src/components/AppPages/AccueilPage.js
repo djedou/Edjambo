@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Menu from "../menu/Menu";
-import AcceuilBody from "../body/AccueilBody"
+import AcceuilBody from "../body/AccueilBody";
 
 class AccueilPage extends Component{
     constructor(props){

@@ -22,9 +22,9 @@ const mapDispatchToProps = (dispatch) => {
     }
 } 
 
-const AppAcceuilPageContainer = connect(mapStateToProps, mapDispatchToProps)(AccueilPage)
+const PageContainer = connect(mapStateToProps, mapDispatchToProps)(AccueilPage)
 
-class App extends Component{
+class Accueil extends Component{
     render(){
         return(
 
@@ -33,10 +33,10 @@ class App extends Component{
                     <title>Edjambo Notre Bien Commun</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 </Head>
-                <AppAcceuilPageContainer />
+                <PageContainer />
             </Provider>
         );
     }
 }
 
-export default App;
+export default Accueil;

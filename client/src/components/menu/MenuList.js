@@ -16,6 +16,7 @@ class MenuList extends Component{
                         name={item.name}
                         active={item.active}
                         title={item.title}
+                        url={item.url}
                         hideSubmenu={item.hideSubmenu}
                         submenu={item.submenu}
                     />

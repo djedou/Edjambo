@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import SmartMenuItem from "./SmartMenuItem";
 import smartImg from "../../../static/img/menu.png";
+import Link from 'next/link';
 
 class SmartMenuList extends Component{
     constructor(props){
@@ -20,12 +21,15 @@ class SmartMenuList extends Component{
                             key={item.id}
                             className="subTab"
                         >
-                            <a 
-                                className="sublinkStyle" 
-                                href="#"
+                            <Link
+                                href={item.url}
                             >
-                                {item.title}
-                            </a>
+                                <a 
+                                    className="sublinkStyle" 
+                                >
+                                    {item.title}
+                                </a>
+                            </Link>
                             <ul className="TabSubUl">
                                 <li className="TabSublinkStyle"> 
                                     <SmartMenuItem 

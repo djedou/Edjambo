@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import MenuList from "./MenuList";
-import img from "../../../static/img/bg.jpeg"
+import img from "../../../static/img/bg.jpeg";
+import Link from 'next/link';
 
 class Menu extends Component{
     constructor(props){
@@ -18,9 +19,10 @@ class Menu extends Component{
                         <img className="proflinkStyle" src={img} >
                         </img>
                         <ul className="subProfilMenu">
-                            <li className="profSubmenuList"><a className="profLinkStyle" href="#">Profil</a></li>
-                            <li className="profSubmenuList"><a className="profLinkStyle" href="#">Connexion</a></li>
-                            <li className="profSubmenuList"><a className="profLinkStyle" href="#">Déconnexion</a></li>
+                            <li className="profSubmenuList"><Link href="profil"><a className="profLinkStyle">Profil</a></Link></li>
+                            <li className="profSubmenuList"><Link href="connexion"><a className="profLinkStyle">Connexion</a></Link></li>
+                            <li className="profSubmenuList"><Link href="deconnexion"><a className="profLinkStyle">Déconnexion</a></Link></li>
+                            <li className="profSubmenuList"><Link href="admin"><a className="profLinkStyle">Admin</a></Link></li>
                         </ul>
                     </li>
                 </ul> 

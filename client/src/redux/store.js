@@ -11,9 +11,9 @@ const logger = (store) => (next) => (action) => {
 }
 
 const setDataMiddleware = (store) => (next) => (action) => {
-    if(action.type === constants.INITIALIZE_BODY_DATA) {
+    /* if(action.type === constants.INITIALIZE_BODY_DATA) {
         setData(store.dispatch)
-    }
+    } */
     return next(action);
 }
 

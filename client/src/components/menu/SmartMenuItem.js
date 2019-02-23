@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Link from 'next/link';
 
 class SmartMenuItem extends Component{
     constructor(props){
@@ -10,14 +11,15 @@ class SmartMenuItem extends Component{
         return(
             <div>
                 {submenu.map(item =>{
-                    return <a 
-                                href="#"
+                    return <Link 
                                 key={item.id}
-                                className="subStyle"
-                            >
-                        {item.title}<br/>
-                    </a>
-
+                                href={item.url}>
+                                <a 
+                                    className="subStyle"
+                                >
+                                {item.title}<br/>
+                                </a>
+                            </Link>
                 })}
                 <style jsx>{`
                     .subStyle{

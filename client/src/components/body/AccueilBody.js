@@ -3,7 +3,7 @@ import React, {Component} from "react";
 class AccueilBody extends Component{
     constructor(props){
         super(props);
-        this.props.setData({});
+        /* this.props.setData({}); */
     }
     render(){
         return(
@@ -14,11 +14,11 @@ class AccueilBody extends Component{
                 <section className="sector">
                     section 2
                 </section>
-                <section className="sector">
+                <section className="sector" id="sector3">
                     section 3
                 </section>
                 <section className="sector">
-                    section 3
+                    section 4
                 </section>
                 <style jsx>{`
                     .sector{

@@ -6,6 +6,7 @@ body{
     background-size: cover;
 
 }
+/* Debut de CSS pour la page Accueil ou index */
 .container{
     display: grid;
     grid-template-columns: 100%;
@@ -56,5 +57,6 @@ body{
         grid-template-columns: 80% 20%;
     }
 }
+/* Fin de CSS pour la page Accueil ou index */
 
 /*# sourceMappingURL=styles.chunk.css.map*/

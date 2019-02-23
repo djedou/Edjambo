@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Link from 'next/link';
 
 class MenuItem extends Component{
     constructor(props){
@@ -9,24 +10,24 @@ class MenuItem extends Component{
         let menuArray = Object.values(submenu); 
         return(
             <li className="submenuItems">
-                <a 
-                    className="linkStyle" 
-                    href="#"
-                >
-                    {this.props.title}
-                </a>
+                <Link href={this.props.url}>
+                    <a 
+                        className="linkStyle" 
+                    >
+                        {this.props.title}
+                    </a>
+                </Link>
                 <ul className="sbmenuUl">
                     {menuArray.map(item => (
                         <li 
-                            key={item.id}
-                            className="SubmenuList"
-                        >
-                            <a 
-                                className="sublinkStyle" 
-                                href="#"
-                            >
-                                {item.title}
-                            </a>
+                            key={item.id} 
+                            className="SubmenuList">
+                                <Link href={item.url}>
+                                    <a 
+                                        className="sublinkStyle">
+                                        {item.title}
+                                    </a>
+                                </Link>
                         </li>
                     ))}
                 </ul>
