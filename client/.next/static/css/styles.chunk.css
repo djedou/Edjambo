@@ -14,7 +14,6 @@ body{
     grid-template-areas:"head"
                         "menu"
                         "main";
-    
     align-items: center;
     grid-column-gap: 0px;
     grid-row-gap: 3px;
@@ -32,6 +31,11 @@ body{
     grid-template-areas: "mainMenu profilMenu";
     position: sticky;
     top: 0px;
+}
+@media (max-width: 600px){
+    .menu{
+        grid-template-columns: 80% 20%;
+    }
 }
 .mainMenu{
     grid-area: mainMenu;
@@ -52,11 +56,73 @@ body{
     padding-right: 5vw;
     padding-left: 5vw;
 }
+
+/* Fin de CSS pour la page Accueil ou index */
+
+/* Debut de CSS pour la page Admin */
+
+.adminContainer{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 70px auto;
+    grid-template-areas:"headleft headright" 
+                        "bodyleft bodyright";
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.headleft{
+    grid-area: headleft;
+    border: 2px solid #000;
+}
+.headright{
+    grid-area: headright;
+    border: 2px solid #000;
+}
+.bodyleft{
+    grid-area: bodyleft;
+    border: 2px solid #000;
+}
+.bodyright{
+    grid-area: bodyright;
+    border: 2px solid #000;
+}
+
 @media (max-width: 600px){
-    .menu{
-        grid-template-columns: 80% 20%;
+    .adminContainer{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 50px auto;
+        grid-template-areas:"smartheadleft smartheadright" 
+                            "smartbody smartbody";
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    .smartheadleft{
+        grid-area: smartheadleft;
+        border: 2px solid #000;
+    }
+    .smartheadright{
+        grid-area: smartheadright;
+        border: 2px solid #000;
+    }
+    .smartbody{
+        grid-area: smartbody;
+        border: 2px solid #000;
     }
 }
-/* Fin de CSS pour la page Accueil ou index */
+
+
+@media(min-width: 602px){
+    .smartheadleft{
+        display: none;
+    }
+    .smartheadright{
+        display: none;
+    }
+    .smartbody{
+        display: none;
+    }
+}
+
 
 /*# sourceMappingURL=styles.chunk.css.map*/

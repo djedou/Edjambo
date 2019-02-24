@@ -15287,8 +15287,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "./node_modules/next/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _static_css_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../static/css/main.css */ "./static/css/main.css");
-/* harmony import */ var _static_css_main_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_static_css_main_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _static_css_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../static/css/style.css */ "./static/css/style.css");
+/* harmony import */ var _static_css_style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_static_css_style_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _src_components_AppPages_ConnexionPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/components/AppPages/ConnexionPage */ "./src/components/AppPages/ConnexionPage.js");
 /* harmony import */ var _src_redux_menuActionsCreator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../src/redux/menuActionsCreator */ "./src/redux/menuActionsCreator.js");
 /* harmony import */ var _src_redux_dataActionsCreator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../src/redux/dataActionsCreator */ "./src/redux/dataActionsCreator.js");
@@ -16529,7 +16529,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR
 
 /***/ }),
 
-/***/ 6:
+/***/ 7:
 /*!**********************************!*\
   !*** multi ./pages/connexion.js ***!
   \**********************************/
@@ -16554,5 +16554,5 @@ module.exports = dll_19b830e266d1a33d6422;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js","styles"]]]));;
+},[[7,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=connexion.js.map

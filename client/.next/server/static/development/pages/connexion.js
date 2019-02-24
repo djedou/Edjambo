@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -108,8 +108,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _static_css_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../static/css/main.css */ "./static/css/main.css");
-/* harmony import */ var _static_css_main_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_static_css_main_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _static_css_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../static/css/style.css */ "./static/css/style.css");
+/* harmony import */ var _static_css_style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_static_css_style_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _src_components_AppPages_ConnexionPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/components/AppPages/ConnexionPage */ "./src/components/AppPages/ConnexionPage.js");
 /* harmony import */ var _src_redux_menuActionsCreator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../src/redux/menuActionsCreator */ "./src/redux/menuActionsCreator.js");
 /* harmony import */ var _src_redux_dataActionsCreator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../src/redux/dataActionsCreator */ "./src/redux/dataActionsCreator.js");
@@ -1312,10 +1312,10 @@ var Store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_menuReduc
 
 /***/ }),
 
-/***/ "./static/css/main.css":
-/*!*****************************!*\
-  !*** ./static/css/main.css ***!
-  \*****************************/
+/***/ "./static/css/style.css":
+/*!******************************!*\
+  !*** ./static/css/style.css ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1345,7 +1345,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!**********************************!*\
   !*** multi ./pages/connexion.js ***!
   \**********************************/

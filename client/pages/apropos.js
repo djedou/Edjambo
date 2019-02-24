@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Head from 'next/head';
 import {connect, Provider } from 'react-redux';
-import "../static/css/main.css";
+import "../static/css/style.css";
 import AproposPage from "../src/components/AppPages/AproposPage";
 /* Redux Elements */
 import menuActionCreators from '../src/redux/menuActionsCreator';

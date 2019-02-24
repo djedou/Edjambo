@@ -1,8 +1,8 @@
 {
-  "../static/css/main.css": [
+  "../static/css/style.css": [
     {
-      "id": "./static/css/main.css",
-      "name": "./static/css/main.css",
+      "id": "./static/css/style.css",
+      "name": "./static/css/style.css",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
