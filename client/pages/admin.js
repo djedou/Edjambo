@@ -1,42 +1,85 @@
 import React, {Component} from "react";
-import Head from 'next/head';
-import {connect, Provider } from 'react-redux';
-import "../static/css/style.css";
-import AdminPage from "../src/components/admin/AdminPage";
-/* Redux Elements */
-import menuActionCreators from '../src/redux/menuActionsCreator';
-import dataActionsCreator from '../src/redux/dataActionsCreator';
-import Store from '../src/redux/store';
+import ReduxToPages from "../src/components/ReduToPages";
 
-const mapStateToProps = (state) => {
-    return {
-        menu:state.menu
+class AdminPage extends Component{
+    constructor(props){
+        super(props);
+        console.log(this.props)
     }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        activateMenu: (decision,menuItem) => dispatch(menuActionCreators.activateMenu(decision,menuItem)),
-        hideFunction: (decision,menuItem) => dispatch(menuActionCreators.hideFunction(decision,menuItem)),
-        setData: (data) => dispatch(dataActionsCreator.setData(data))
-    }
-} 
-
-const PageContainer = connect(mapStateToProps, mapDispatchToProps)(AdminPage)
-
-class Admin extends Component{
     render(){
         return(
-
-            <Provider store={Store}>
-                <Head>
-                    <title>Edjambo Notre Bien Commun</title>
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                </Head>
-                <PageContainer />
-            </Provider>
+            <div className="adminContainer"> 
+                <header className="headleft">
+                    login profile
+                </header>
+                <header className="headright">
+                    <h1>Edjambo Notre Bien Commun</h1>
+                </header>
+                <aside className="bodyleft">
+                    options
+                </aside>
+                <section className="bodyright">
+                    body
+                </section>
+                <header className="smartheadleft">
+                    Options
+                </header>
+                <header className="smartheadright">
+                    <h2>Edjambo Notre Bien Commun</h2>
+                    <span>login profile</span>
+                </header>
+                <section className="smartbody">
+                    admin body
+                </section>
+                <style jsx>{`
+                    .headleft{
+                        background-color: white;
+                        line-height: 60px;
+                        text-align: center;
+                    }
+                    .headright{
+                        background-color: green;
+                        line-height: 45px;
+                        text-align: center;
+                    }
+                    .bodyleft{
+                        background-color: green;
+                        text-align: center;
+                    }
+                    .bodyright{
+                        background-color: white;
+                        text-align: center; 
+                    }
+                    h1{
+                        font-size: 20px;
+                        color: black;
+                    }
+                    h2{
+                        font-size: 10px;
+                        color: black;
+                        float: left;
+                        padding: 5px;
+                    }
+                    .smartheadleft{
+                        background-color: white;
+                        line-height: 40px;
+                        text-align: center;
+                        font-size: 10px;
+                    }
+                    .smartheadright{
+                        background-color: green;
+                        line-height: 10px;
+                        text-align: center;
+                        font-size: 10px;
+                    }
+                    .smartbody{
+                        background-color: white;
+                        text-align: center; 
+                    }
+                `}</style>
+            </div>
         );
     }
 }
 
-export default Admin;
+export default ReduxToPages(AdminPage);

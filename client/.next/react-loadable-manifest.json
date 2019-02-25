@@ -1,5 +1,5 @@
 {
-  "../static/css/style.css": [
+  "../../static/css/style.css": [
     {
       "id": "./static/css/style.css",
       "name": "./static/css/style.css",

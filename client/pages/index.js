@@ -1,42 +1,49 @@
 import React, {Component} from "react";
-import Head from 'next/head';
-import {connect, Provider } from 'react-redux';
-import "../static/css/style.css";
-import AccueilPage from "../src/components/AppPages/AccueilPage";
-/* Redux Elements */
-import menuActionCreators from '../src/redux/menuActionsCreator';
-import dataActionsCreator from '../src/redux/dataActionsCreator';
-import Store from '../src/redux/store';
+/* import Menu from "../menu/Menu"; */
+import Menu from "../src/components/menu/Menu";
+/* import AcceuilBody from "../body/AccueilBody"; */
+import AcceuilBody from "../src/components/body/AccueilBody";
+import ReduxToPages from "../src/components/ReduToPages";
 
-const mapStateToProps = (state) => {
-    return {
-        menu:state.menu
+
+class AccueilPage extends Component{
+    constructor(props){
+        super(props);
     }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        activateMenu: (decision,menuItem) => dispatch(menuActionCreators.activateMenu(decision,menuItem)),
-        hideFunction: (decision,menuItem) => dispatch(menuActionCreators.hideFunction(decision,menuItem)),
-        setData: (data) => dispatch(dataActionsCreator.setData(data))
-    }
-} 
-
-const PageContainer = connect(mapStateToProps, mapDispatchToProps)(AccueilPage)
-
-class Accueil extends Component{
     render(){
+        let menuArray = Object.values(this.props.menu);
         return(
-
-            <Provider store={Store}>
-                <Head>
-                    <title>Edjambo Notre Bien Commun</title>
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                </Head>
-                <PageContainer />
-            </Provider>
+            <div className="container">
+                <header className="head">
+                   <h1>Edjambo Notre Bien Commun</h1> 
+                </header>
+                <Menu 
+                    menu={menuArray}
+                    activateMenu={this.props.activateMenu}
+                    hideFunction={this.props.hideFunction}
+                />
+                <AcceuilBody 
+                    setData={this.props.setData}
+                />
+                <style jsx>{`
+                    .container{
+                        margin: 0;
+                        padding: 0;
+                    }
+                    h1{
+                        font-size: 20px;
+                        color: black;
+                    }
+                    @media (max-width: 600px){
+                        h1{
+                            font-size: 15px;
+                            color: black;
+                        }
+                    }
+                `}</style>
+            </div>
         );
     }
 }
 
-export default Accueil;
+export default ReduxToPages(AccueilPage);

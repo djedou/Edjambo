@@ -12,6 +12,7 @@ class SmartMenuItem extends Component{
             <div>
                 {submenu.map(item =>{
                     return <Link 
+                                prefetch
                                 key={item.id}
                                 href={item.url}>
                                 <a 

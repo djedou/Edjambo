@@ -22,6 +22,7 @@ class SmartMenuList extends Component{
                             className="subTab"
                         >
                             <Link
+                                prefetch
                                 href={item.url}
                             >
                                 <a 

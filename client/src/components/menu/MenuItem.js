@@ -10,7 +10,7 @@ class MenuItem extends Component{
         let menuArray = Object.values(submenu); 
         return(
             <li className="submenuItems">
-                <Link href={this.props.url}>
+                <Link prefetch href={this.props.url}>
                     <a 
                         className="linkStyle" 
                     >
@@ -22,7 +22,7 @@ class MenuItem extends Component{
                         <li 
                             key={item.id} 
                             className="SubmenuList">
-                                <Link href={item.url}>
+                                <Link prefetch href={item.url}>
                                     <a 
                                         className="sublinkStyle">
                                         {item.title}

@@ -19,10 +19,10 @@ class Menu extends Component{
                         <img className="proflinkStyle" src={img} >
                         </img>
                         <ul className="subProfilMenu">
-                            <li className="profSubmenuList"><Link href="profil"><a className="profLinkStyle">Profil</a></Link></li>
-                            <li className="profSubmenuList"><Link href="connexion"><a className="profLinkStyle">Connexion</a></Link></li>
-                            <li className="profSubmenuList"><Link href="deconnexion"><a className="profLinkStyle">Déconnexion</a></Link></li>
-                            <li className="profSubmenuList"><Link href="admin"><a className="profLinkStyle">Admin</a></Link></li>
+                            <li className="profSubmenuList"><Link prefetch href="profil"><a className="profLinkStyle">Profil</a></Link></li>
+                            <li className="profSubmenuList"><Link prefetch href="connexion"><a className="profLinkStyle">Connexion</a></Link></li>
+                            <li className="profSubmenuList"><Link prefetch href="deconnexion"><a className="profLinkStyle">Déconnexion</a></Link></li>
+                            <li className="profSubmenuList"><Link prefetch href="admin"><a className="profLinkStyle">Admin</a></Link></li>
                         </ul>
                     </li>
                 </ul> 
