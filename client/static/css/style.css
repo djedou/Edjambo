@@ -1,15 +1,22 @@
 body{
-    margin: 2px;
-    margin-top: 2px;
+    margin: 0px;
+    margin-top: 0px;
     padding: 0px;
-    background: url("../img/bg.jpeg");
+    background: url("../img/bg.jpeg") no-repeat center fixed;
     background-size: cover;
-
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
 }
+@media (max-width: 600px){
+    body{
+        background: url("../img/bg.jpeg") repeat;
+    }   
+} 
 /* Debut de CSS pour la page Accueil ou index */
 .container{
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 99vw;
     grid-template-rows: 40px 35px auto;
     grid-template-areas:"head"
                         "menu"
@@ -26,7 +33,7 @@ body{
 .menu{
     grid-area: menu;
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 90vw 9vw;
     grid-template-rows: 45px;
     grid-template-areas: "mainMenu profilMenu";
     position: sticky;
@@ -34,7 +41,7 @@ body{
 }
 @media (max-width: 600px){
     .menu{
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 80vw 19vw;
     }
 }
 .mainMenu{
@@ -52,9 +59,9 @@ body{
     grid-area: main;
     display: flex;
     flex-flow: column;
-    overflow: auto;
     padding-right: 5vw;
     padding-left: 5vw;
+    overflow: auto;
 }
 
 /* Fin de CSS pour la page Accueil ou index */
@@ -63,8 +70,8 @@ body{
 
 .adminContainer{
     display: grid;
-    grid-template-columns: 15% 85%;
-    grid-template-rows: 70px auto;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 10vh 90vh;
     grid-template-areas:"headleft headright" 
                         "bodyleft bodyright";
     grid-column-gap: 0px;
@@ -73,6 +80,7 @@ body{
 .headleft{
     grid-area: headleft;
     border: 2px solid #000;
+    
 }
 .headright{
     grid-area: headright;
@@ -84,19 +92,19 @@ body{
 }
 .bodyright{
     grid-area: bodyright;
-    border: 2px solid #000;
+    border: 2px solid #000; 
 }
 
 @media (max-width: 600px){
-    .adminContainer{
+   .adminContainer{
         display: grid;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: 50px auto;
+        grid-template-columns: 20vw 80vw;
+        grid-template-rows: 9vh 91vh;
         grid-template-areas:"smartheadleft smartheadright" 
                             "smartbody smartbody";
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-    }
+    } 
     .smartheadleft{
         grid-area: smartheadleft;
         border: 2px solid #000;
@@ -109,9 +117,20 @@ body{
         grid-area: smartbody;
         border: 2px solid #000;
     }
+    .bodyright{
+        display: none;
+    }
+    .bodyleft{
+        display: none;
+    }
+    .headleft{
+        display: none;
+        
+    }
+    .headright{
+        display: none;
+    }
 }
-
-
 @media(min-width: 602px){
     .smartheadleft{
         display: none;

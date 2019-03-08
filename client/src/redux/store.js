@@ -1,8 +1,6 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk';
 import menuReducer from './menuReducer';
-import {setData} from '../lib/axios'; 
-import constants from '../lib/constants';
 
 
 const logger = (store) => (next) => (action) => {

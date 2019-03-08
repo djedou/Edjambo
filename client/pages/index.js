@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-/* import Menu from "../menu/Menu"; */
 import Menu from "../src/components/menu/Menu";
-/* import AcceuilBody from "../body/AccueilBody"; */
 import AcceuilBody from "../src/components/body/AccueilBody";
 import ReduxToPages from "../src/components/ReduToPages";
 

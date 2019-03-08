@@ -3,12 +3,13 @@ import Head from 'next/head';
 import {connect, Provider } from 'react-redux';
 import "../../static/css/style.css";
 import menuActionCreators from "../../src/redux/menuActionsCreator";
-import dataActionsCreator from "../../src/redux/dataActionsCreator";
+import adminActionsCreator from "../../src/redux/adminActionsCreator";
 import Store from "../../src/redux/store";
 
 const mapStateToProps = (state) => {
     return {
-        menu:state.menu
+        menu:state.menu,
+        admin:state.admin
     }
 }
 
@@ -16,7 +17,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         activateMenu: (decision,menuItem) => dispatch(menuActionCreators.activateMenu(decision,menuItem)),
         hideFunction: (decision,menuItem) => dispatch(menuActionCreators.hideFunction(decision,menuItem)),
-        setData: (data) => dispatch(dataActionsCreator.setData(data))
+        showOption: (decision,optionName) => dispatch(adminActionsCreator.showAdminOption(decision,optionName))
     }
 } 
 

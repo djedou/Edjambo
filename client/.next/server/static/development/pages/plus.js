@@ -211,7 +211,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _static_css_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../static/css/style.css */ "./static/css/style.css");
 /* harmony import */ var _static_css_style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_static_css_style_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _src_redux_menuActionsCreator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../src/redux/menuActionsCreator */ "./src/redux/menuActionsCreator.js");
-/* harmony import */ var _src_redux_dataActionsCreator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../src/redux/dataActionsCreator */ "./src/redux/dataActionsCreator.js");
+/* harmony import */ var _src_redux_adminActionsCreator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../src/redux/adminActionsCreator */ "./src/redux/adminActionsCreator.js");
 /* harmony import */ var _src_redux_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../src/redux/store */ "./src/redux/store.js");
 var _jsxFileName = "/home/user/mesProjets/Edjambo/client/src/components/ReduToPages.js";
 
@@ -243,7 +243,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    menu: state.menu
+    menu: state.menu,
+    admin: state.admin
   };
 };
 
@@ -255,8 +256,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     hideFunction: function hideFunction(decision, menuItem) {
       return dispatch(_src_redux_menuActionsCreator__WEBPACK_IMPORTED_MODULE_4__["default"].hideFunction(decision, menuItem));
     },
-    setData: function setData(data) {
-      return dispatch(_src_redux_dataActionsCreator__WEBPACK_IMPORTED_MODULE_5__["default"].setData(data));
+    showOption: function showOption(decision, optionName) {
+      return dispatch(_src_redux_adminActionsCreator__WEBPACK_IMPORTED_MODULE_5__["default"].showAdminOption(decision, optionName));
     }
   };
 };
@@ -281,19 +282,19 @@ var ReduxToPages = function ReduxToPages(Page) {
             store: _src_redux_store__WEBPACK_IMPORTED_MODULE_6__["default"],
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 30
+              lineNumber: 31
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 31
+              lineNumber: 32
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 32
+              lineNumber: 33
             },
             __self: this
           }, "Edjambo Notre Bien Commun"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -301,13 +302,13 @@ var ReduxToPages = function ReduxToPages(Page) {
             content: "width=device-width, initial-scale=1.0",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 33
+              lineNumber: 34
             },
             __self: this
           })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PageContainer, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 35
+              lineNumber: 36
             },
             __self: this
           }));
@@ -1015,49 +1016,63 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./src/lib/axios.js":
-/*!**************************!*\
-  !*** ./src/lib/axios.js ***!
-  \**************************/
-/*! exports provided: setData */
+/***/ "./src/lib/adminData.js":
+/*!******************************!*\
+  !*** ./src/lib/adminData.js ***!
+  \******************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setData", function() { return setData; });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _redux_dataActionsCreator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../redux/dataActionsCreator */ "./src/redux/dataActionsCreator.js");
-/* harmony import */ var os__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! os */ "os");
-/* harmony import */ var os__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(os__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-/* var customData = require('./data.json'); */
-
-function setData(dispatch) {
-  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('./data.json').then(function (response) {
-    dispatch(_redux_dataActionsCreator__WEBPACK_IMPORTED_MODULE_1__["default"].setData(response));
-    console.log(response);
-  }).catch(function (err) {
-    console.log("dit not get the data.json");
-    console.log("erreur:", err);
-  });
-}
-/* data({ req, isServer, params, store }) {
-    // server-side logic
-    if (isServer) {
-      let data = JSON.parse(require('fs').readFileSync('static/data.json', 'utf8'))
-      return { authors: data }
-    }
-    // client-side logic
-    return axios.get('/data.json')
-    .then((res) => {
-      return {
-        authors: res.data
-       }
-    })
-  } */
+var Admindata = {
+  dashbord: {
+    id: 1,
+    name: "dashbord",
+    setted: true
+  },
+  activites: {
+    id: 2,
+    name: "activites",
+    setted: false
+  },
+  annonces: {
+    id: 3,
+    name: "annonces",
+    setted: false
+  },
+  membres: {
+    id: 4,
+    name: "membres",
+    setted: false
+  },
+  associations: {
+    id: 5,
+    name: "associations",
+    setted: false
+  },
+  media: {
+    id: 6,
+    name: "media",
+    setted: false
+  },
+  contact: {
+    id: 7,
+    name: "contact",
+    setted: false
+  },
+  gallerie: {
+    id: 8,
+    name: "gallerie",
+    setted: false
+  },
+  enbc: {
+    id: 9,
+    name: "enbc",
+    setted: false
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (Admindata);
 
 /***/ }),
 
@@ -1073,7 +1088,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   MENU_ACTIVATED: 'menu is activated',
   SUBMENU_HIDDEN: 'submenu is hidden',
-  INITIALIZE_BODY_DATA: 'set body data'
+  SET_ADMIN_BODY: "set admin body"
 });
 
 /***/ }),
@@ -1183,10 +1198,10 @@ var Menudata = {
 
 /***/ }),
 
-/***/ "./src/redux/dataActionsCreator.js":
-/*!*****************************************!*\
-  !*** ./src/redux/dataActionsCreator.js ***!
-  \*****************************************/
+/***/ "./src/redux/adminActionsCreator.js":
+/*!******************************************!*\
+  !*** ./src/redux/adminActionsCreator.js ***!
+  \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1194,15 +1209,16 @@ var Menudata = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lib/constants */ "./src/lib/constants.js");
 
-var dataActionsCreator = {
-  setData: function setData(data) {
+var adminActionsCreator = {
+  showAdminOption: function showAdminOption(decision, optionName) {
     return {
-      type: _lib_constants__WEBPACK_IMPORTED_MODULE_0__["default"].INITIALIZE_BODY_DATA,
-      data: data
+      type: _lib_constants__WEBPACK_IMPORTED_MODULE_0__["default"].SET_ADMIN_BODY,
+      name: optionName,
+      setted: decision
     };
   }
 };
-/* harmony default export */ __webpack_exports__["default"] = (dataActionsCreator);
+/* harmony default export */ __webpack_exports__["default"] = (adminActionsCreator);
 
 /***/ }),
 
@@ -1248,15 +1264,17 @@ var menuActionsCreator = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lib/constants */ "./src/lib/constants.js");
 /* harmony import */ var _lib_menuData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../lib/menuData */ "./src/lib/menuData.js");
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux */ "redux");
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _lib_adminData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../lib/adminData */ "./src/lib/adminData.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux */ "redux");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
-var initialState = _lib_menuData__WEBPACK_IMPORTED_MODULE_1__["default"];
+
+/* let initialState = Menudata; */
 
 var menuItemReducer = function menuItemReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _lib_menuData__WEBPACK_IMPORTED_MODULE_1__["default"];
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
@@ -1265,8 +1283,19 @@ var menuItemReducer = function menuItemReducer() {
   }
 };
 
-var menuReducer = Object(redux__WEBPACK_IMPORTED_MODULE_2__["combineReducers"])({
-  menu: menuItemReducer
+var adminItemReducer = function adminItemReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _lib_adminData__WEBPACK_IMPORTED_MODULE_2__["default"];
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
+var menuReducer = Object(redux__WEBPACK_IMPORTED_MODULE_3__["combineReducers"])({
+  menu: menuItemReducer,
+  admin: adminItemReducer
 });
 /* harmony default export */ __webpack_exports__["default"] = (menuReducer);
 
@@ -1286,10 +1315,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ "redux-thunk");
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _menuReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menuReducer */ "./src/redux/menuReducer.js");
-/* harmony import */ var _lib_axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../lib/axios */ "./src/lib/axios.js");
-/* harmony import */ var _lib_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../lib/constants */ "./src/lib/constants.js");
-
-
 
 
 
@@ -1364,17 +1389,6 @@ module.exports = __webpack_require__(/*! ./pages/plus.js */"./pages/plus.js");
 
 /***/ }),
 
-/***/ "axios":
-/*!************************!*\
-  !*** external "axios" ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("axios");
-
-/***/ }),
-
 /***/ "next/head":
 /*!****************************!*\
   !*** external "next/head" ***!
@@ -1394,17 +1408,6 @@ module.exports = require("next/head");
 /***/ (function(module, exports) {
 
 module.exports = require("next/link");
-
-/***/ }),
-
-/***/ "os":
-/*!*********************!*\
-  !*** external "os" ***!
-  \*********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("os");
 
 /***/ }),
 
