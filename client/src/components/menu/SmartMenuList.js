@@ -47,16 +47,14 @@ class SmartMenuList extends Component{
                         list-style: none;
                     }
                     .menuImg{
-                        width: 30px;
-                        height: 30px;
-                    
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
                     }
                     .tabList{
                         background-color: black;
                         padding: 0px;
                         margin-left: -10px;
-                       /*  position: absolute;
-                        z-index: 10; */
                         display: block;
                         opacity: 1;
                         width: 100px;

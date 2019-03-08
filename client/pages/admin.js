@@ -1,6 +1,11 @@
 import React, {Component} from "react";
 import ReduxToPages from "../src/components/ReduToPages";
 import OptionContainer from "../src/components/admin/options/OptionContainer";
+import BodyContainer from "../src/components/admin/body/BodyContainer";
+import SmartBodyContainer from "../src/components/admin/body/SmartBodyContainer";
+
+import smartImg from "../static/img/menu.png";
+
 
 class AdminPage extends Component{
     constructor(props){
@@ -8,6 +13,7 @@ class AdminPage extends Component{
     }
     render(){
         let {admin,showOption} = this.props;
+        let adminSmartArray = Object.values(admin);
         return(
             <div className="adminContainer"> 
                 <header className="headleft">
@@ -23,21 +29,38 @@ class AdminPage extends Component{
                         showOption = {showOption}
                         />
                 </aside>
-                <section className="bodyright">
-                    body
-                </section>
-
+                <BodyContainer 
+                    admin = {admin}                
+                />
                 {/* smartphones start here */}                
                 <header className="smartheadleft">
-                    Options
+                    <img className="menuImg" src={smartImg} ></img>
+
+                    <ul className="tabList">
+                        {adminSmartArray.map(item => {
+                            this.showFromSmartMenu = (e) => {
+                                e.preventDefault();
+                                let {name} = item;
+                                showOption(name);
+                            };
+                            return  <li 
+                                        key={item.id}
+                                        className="subTab"
+                                        onClick = {this.showFromSmartMenu}
+                                    >
+                                    {item.title}
+                                    </li>
+                        })}    
+                    </ul>
+
                 </header>
                 <header className="smartheadright">
                     <h2>Edjambo Notre Bien Commun</h2>
                     <span className="smartprofile">login profile</span>
                 </header>
-                <section className="smartbody">
-                    admin body
-                </section>
+                <SmartBodyContainer 
+                    admin = {admin}
+                />
                 <style jsx>{`
                     .headleft{
                         background-color: white;
@@ -53,15 +76,12 @@ class AdminPage extends Component{
                         background-color: green;
                         text-align: center;
                         padding-top: 5px;
+                        overflow: auto;
                     }
                     .optionHeader{
                         color: black;
                         font-size: 19px;
                         text-decoration: underline;
-                    }
-                    .bodyright{
-                        background-color: white;
-                        text-align: center; 
                     }
                     h1{
                         font-size: 20px;
@@ -77,9 +97,42 @@ class AdminPage extends Component{
                         border: 1px solid #0f0;
                         float: right;
                     }
+                    .menuImg{
+                        width: 8vh;
+                        height: 8vh;
+                        border-radius: 50%;
+                        background-color: green;
+                    }
+                    .tabList{
+                        padding: 0px;
+                        margin-left: -10px;
+                        display: block;
+                        position: relative;
+                        z-index: 10;
+                        left: 12px;
+                        top: -15px;
+                        width: 90px;
+                    }
+                    .subTab{
+                        display:none;
+                        list-style: none;
+                        text-align: center;
+                        background-color: green;
+                        height: 30px;
+                        color: white;
+                        line-height: 30px;
+                        font-size: 13px;
+                    }
+                    .subTab:hover{
+                        background-color: blue;
+                        cursor: pointer;
+                    }
+                    .smartheadleft:hover .subTab{
+                        display: block;
+                    }
                     .smartheadleft{
                         background-color: white;
-                        line-height: 40px;
+                        line-height: 20px;
                         text-align: center;
                         font-size: 10px;
                     }
@@ -90,12 +143,6 @@ class AdminPage extends Component{
                         font-size: 10px;
                         border: 1px solid #0f0;
                     }
-                    .smartbody{
-                        background-color: white;
-                        text-align: center; 
-                    }
-
-                    
                     @media (max-height: 600px){
                         .headleft{
                             line-height: 8vh;  

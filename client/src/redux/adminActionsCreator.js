@@ -2,11 +2,10 @@ import constants from '../lib/constants';
 
 const adminActionsCreator = {
    
-    showAdminOption(decision,optionName) {
+    showAdminOption(optionName) {
         return {
             type: constants.SET_ADMIN_BODY,
-            name: optionName,
-            setted: decision
+            name: optionName
         };
     }
 };

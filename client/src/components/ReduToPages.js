@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         activateMenu: (decision,menuItem) => dispatch(menuActionCreators.activateMenu(decision,menuItem)),
         hideFunction: (decision,menuItem) => dispatch(menuActionCreators.hideFunction(decision,menuItem)),
-        showOption: (decision,optionName) => dispatch(adminActionsCreator.showAdminOption(decision,optionName))
+        showOption: (optionName) => dispatch(adminActionsCreator.showAdminOption(optionName))
     }
 } 
 

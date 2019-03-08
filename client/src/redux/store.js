@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk';
-import menuReducer from './menuReducer';
+import reducer from './reducers';
 
 
 const logger = (store) => (next) => (action) => {
@@ -8,15 +8,8 @@ const logger = (store) => (next) => (action) => {
     return next(action);
 }
 
-const setDataMiddleware = (store) => (next) => (action) => {
-    /* if(action.type === constants.INITIALIZE_BODY_DATA) {
-        setData(store.dispatch)
-    } */
-    return next(action);
-}
-
 const Store = createStore(
-    menuReducer,
-    applyMiddleware(thunk,logger,setDataMiddleware)
+    reducer,
+    applyMiddleware(thunk,logger)
 );
 export default Store;

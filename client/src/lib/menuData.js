@@ -12,7 +12,7 @@ let Menudata = {
         id: 2,
         name: "media",
         active: false,
-        title: "Media",
+        title: "Média",
         url:"/media",
         hideSubmenu: true,
         submenu: [
