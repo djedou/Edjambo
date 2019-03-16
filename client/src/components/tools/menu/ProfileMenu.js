@@ -55,7 +55,7 @@ class ProfileMenu extends Component{
                             top: -15px;
                             right: 70px;
                             z-index: 10;
-                            opacity: 0.9;
+                            opacity: 1;
                             width: 115px;
                         }
                         .profSubmenuList{

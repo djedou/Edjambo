@@ -7,7 +7,11 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover; 
 }
-
+@media (max-width: 720px){
+    body{
+        background: url("../img/bg.jpeg") repeat;
+    }   
+} 
 .container{
     display: grid;
     grid-template-columns: 100vw;
@@ -53,4 +57,8 @@ body{
 }
 .profilMenu{
     grid-area: profilMenu;
+}
+.menuList{
+    display: flex;
+    justify-items: center;
 }

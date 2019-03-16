@@ -22,8 +22,16 @@ class AccueilPage extends Component{
                 <PageMenu
                     menu={menuArray}
                 />
-                
                 <PageBody />
+                <style jsx>{`
+                    .menu{
+                        margin: 0px;
+                        padding: 0;
+                        background-color: black;
+                        height: 40px;
+                        opacity: 1;
+                    }
+                `}</style>
             </div>
         );
     }

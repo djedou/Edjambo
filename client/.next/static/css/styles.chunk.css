@@ -7,7 +7,11 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover; 
 }
-
+@media (max-width: 720px){
+    body{
+        background: url(/_next/static/images/bg-41030ceaa4cecbf32a7cd97c9a92fffe.jpeg) repeat;
+    }   
+} 
 .container{
     display: grid;
     grid-template-columns: 100vw;
@@ -54,5 +58,10 @@ body{
 .profilMenu{
     grid-area: profilMenu;
 }
+.menuList{
+    display: flex;
+    justify-items: center;
+}
+
 
 /*# sourceMappingURL=styles.chunk.css.map*/

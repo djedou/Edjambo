@@ -1,6 +1,7 @@
 # Edjambo
 Un projet en NextJS
-
+NB: le projet est en phase de developpement et donc si vous voulez voir le travail fait, veillez suivre les instructions dans la 
+section `Tester`
 ## Table des Matières
 1. [Introduction](#Introduction)  
 1. [Technologies](#Technologies)  

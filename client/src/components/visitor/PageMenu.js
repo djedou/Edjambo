@@ -1,7 +1,6 @@
 import React, {Component} from "react";
-import withSizes from 'react-sizes';
-import DesktopMenu from "../tools/menu/desktop/DesktopMenu";
-import MobileMenu from "../tools/menu/mobile/MobileMenu";
+import MenuList from "../tools/menu/MenuList";
+import ProfileMenu from "../tools/menu/ProfileMenu";
 
 
 class PageMenu extends Component{
@@ -12,13 +11,24 @@ class PageMenu extends Component{
 
     render(){
         let {menu} = this.props;
-        return this.props.isMobile ? <MobileMenu menu={menu} /> : <DesktopMenu menu={menu}/>
-    
+        return(
+            <nav className="menu">
+                <MenuList 
+                    menu={menu}
+                /> 
+                <ProfileMenu />
+                <style jsx>{`
+                    .menu{
+                        margin: 0px;
+                        padding: 0;
+                        background-color: black;
+                        height: 40px;
+                        opacity: 1;
+                    }
+                `}</style>
+            </nav>
+        )
     }
 }
 
-const mapSizesToProps = ({ width }) => ({
-    isMobile: width <= 768,
-  })
-
-export default withSizes(mapSizesToProps)(PageMenu);
+export default PageMenu;
