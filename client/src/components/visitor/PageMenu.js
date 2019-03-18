@@ -6,7 +6,6 @@ import ProfileMenu from "../tools/menu/ProfileMenu";
 class PageMenu extends Component{
     constructor(props){
         super(props);  
-        console.log(this.props)
     }
 
     render(){
