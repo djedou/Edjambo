@@ -1,16 +1,24 @@
-'use strict'
 
-/* eslint-disable */
-const withCss = require('@zeit/next-css')
-const withImages = require('next-images')
-const withPlugins = require('next-compose-plugins')
+const debug = process.env.NODE_ENV !== "production";
 
-// fix: prevents error when .css files are required by node
-if (typeof require !== 'undefined') {
-    require.extensions['.css'] = (file) => { }
+module.exports = {
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+      "/user": { page: "/user" },
+    }
+  },
+  assetPrefix: !debug ? '/Edjambo/' : '',
+  webpack: (config, { dev }) => {
+    config.module.rules = config.module.rules.map(rule => {
+      if(rule.loader === 'babel-loader') {
+        rule.options.cacheDirectory = false
+      }
+      return rule
+    })
+    return config
+  },
+  publicRuntimeConfig: {
+    staticFolder: '/static'
+  }
 }
-
-module.exports = withPlugins([
-    withCss,
-    withImages
-])
