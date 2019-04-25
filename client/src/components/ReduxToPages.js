@@ -8,7 +8,7 @@ import Store from "../../src/redux/store";
 const mapStateToProps = (state) => {
     return {
         menu:state.menu,
-        admin:state.admin
+        admin:state.admin 
     }
 }
 

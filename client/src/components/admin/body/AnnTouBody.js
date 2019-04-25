@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class ActTouBody extends Component{
+class AnnTouBody extends Component{
 
     render(){
         return(
@@ -115,4 +115,4 @@ class ActTouBody extends Component{
 
 }
 
-export default ActTouBody;
+export default AnnTouBody;

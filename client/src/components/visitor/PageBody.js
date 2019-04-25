@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import StyledButton from "duid";
+
 
 class PageBody extends Component{
     
@@ -8,7 +8,6 @@ class PageBody extends Component{
         return(
             <div className="main">
                 body
-                <StyledButton myLabel="djed"/>
             </div>
         )
     }

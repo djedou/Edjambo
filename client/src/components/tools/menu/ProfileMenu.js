@@ -18,7 +18,7 @@ class ProfileMenu extends Component{
                             <li className="profSubmenuList"><Link prefetch href="profil"><a className="profLinkStyle">Profil</a></Link></li>
                             <li className="profSubmenuList"><Link prefetch href="connexion"><a className="profLinkStyle">Connexion</a></Link></li>
                             <li className="profSubmenuList"><Link prefetch href="deconnexion"><a className="profLinkStyle">Déconnexion</a></Link></li>
-                            <li className="profSubmenuList"><Link prefetch href="admin"><a className="profLinkStyle">Admin</a></Link></li>
+                            <li className="profSubmenuList"><Link prefetch href="admin"><a className="profLinkStyle" target="_blank">Admin</a></Link></li>
                         </ul>
                     </li>
                 
