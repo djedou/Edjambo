@@ -22,7 +22,7 @@ class MenuItem extends Component{
                         <li 
                             key={item.id} 
                             className="SubmenuList">
-                                <Link prefetch href={item.url} as={`${process.env.ASSET_PREFIX}/${item.name}`}>
+                                <Link prefetch href={item.url}>
                                     <a 
                                         className="sublinkStyle">
                                         {item.title}
