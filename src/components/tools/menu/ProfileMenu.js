@@ -15,10 +15,10 @@ class ProfileMenu extends Component{
                         <img className="proflinkStyle" src={smartImg} >
                         </img>
                         <ul className="subProfilMenu">
-                            <li className="profSubmenuList"><Link prefetch href="profil"><a className="profLinkStyle">Profil</a></Link></li>
-                            <li className="profSubmenuList"><Link prefetch href="connexion"><a className="profLinkStyle">Connexion</a></Link></li>
-                            <li className="profSubmenuList"><Link prefetch href="deconnexion"><a className="profLinkStyle">Déconnexion</a></Link></li>
-                            <li className="profSubmenuList"><Link prefetch href="admin"><a className="profLinkStyle" target="_blank">Admin</a></Link></li>
+                            <li className="profSubmenuList"><Link prefetch href="profil" as={`${process.env.ASSET_PREFIX}/profil`}><a className="profLinkStyle">Profil</a></Link></li>
+                            <li className="profSubmenuList"><Link prefetch href="connexion" as={`${process.env.ASSET_PREFIX}/connexion`}><a className="profLinkStyle">Connexion</a></Link></li>
+                            <li className="profSubmenuList"><Link prefetch href="deconnexion" as={`${process.env.ASSET_PREFIX}/deconnexion`}><a className="profLinkStyle">Déconnexion</a></Link></li>
+                            <li className="profSubmenuList"><Link prefetch href="admin" as={`${process.env.ASSET_PREFIX}/admin`}><a className="profLinkStyle" target="_blank">Admin</a></Link></li>
                         </ul>
                     </li>
                 
