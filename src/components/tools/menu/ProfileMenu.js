@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import img from "../../../../static/img/bg.jpeg";
 import Link from 'next/link';
+import smartImg from '../../../../static/img/bg.png'
 
 class ProfileMenu extends Component{
     constructor(props){
@@ -12,7 +12,7 @@ class ProfileMenu extends Component{
             <div>
                 <ul className="profilMenu">
                     <li className="profList">
-                        <img className="proflinkStyle" src={img} >
+                        <img className="proflinkStyle" src={smartImg} >
                         </img>
                         <ul className="subProfilMenu">
                             <li className="profSubmenuList"><Link prefetch href="profil"><a className="profLinkStyle">Profil</a></Link></li>

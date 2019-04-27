@@ -1,11 +1,20 @@
 
 const debug = process.env.NODE_ENV !== "production";
+const withPlugins = require('next-compose-plugins');
+const withCSS = require('@zeit/next-css');
+const withImages = require('next-images')
 
-module.exports = {
+const nextConfig = {
   exportPathMap: function () {
     return {
       "/": { page: "/" },
-      "/user": { page: "/user" },
+      "/admin": { page: "/admin" },
+      "/apropos": { page: "/apropos" },
+      "/connexion": { page: "/connexion" },
+      "/gallerie": { page: "/gallerie" },
+      "/media": { page: "/media" },
+      "/plus": { page: "/plus" },
+      "/profil": { page: "/profil" },
     }
   },
   assetPrefix: !debug ? '/Edjambo/' : '',
@@ -17,8 +26,14 @@ module.exports = {
       return rule
     })
     return config
-  },
-  publicRuntimeConfig: {
-    staticFolder: '/static'
   }
-}
+};
+
+
+module.exports = withPlugins(
+  [
+    withCSS,
+    withImages
+  ],
+  nextConfig
+);
