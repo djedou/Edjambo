@@ -3,6 +3,7 @@ import PageHeader from "../src/components/visitor/PageHeader";
 import PageMenu from "../src/components/visitor/PageMenu";
 import PageBody from "../src/components/visitor/PageBody";
 import ReduxToPages from "../src/reduxToPages/ReduxToPages";
+import PageFooter from "../src/components/visitor/PageFooter"
 
 
 class GalleriePage extends Component{
@@ -24,6 +25,7 @@ class GalleriePage extends Component{
                 />
                 
                 <PageBody />
+                <PageFooter/>
             </div>
         );
     }

@@ -3,6 +3,7 @@ import PageHeader from "../src/components/visitor/PageHeader";
 import PageMenu from "../src/components/visitor/PageMenu";
 import PageBody from "../src/components/visitor/PageBody";
 import ReduxToPages from "../src/reduxToPages/ReduxToPages";
+import PageFooter from "../src/components/visitor/PageFooter"
 
 
 class AccueilPage extends Component{
@@ -23,6 +24,7 @@ class AccueilPage extends Component{
                     menu={menuArray}
                 />
                 <PageBody />
+                <PageFooter/>
                 <style jsx>{`
                     .menu{
                         margin: 0px;
