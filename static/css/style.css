@@ -9,7 +9,7 @@ body{
 }
 @media (max-width: 720px){
     body{
-        background: url("../img/bg.png") repeat;
+        background: url("../img/mobile/bg_mobile.png") no-repeat center fixed;
     }   
 } 
 .container{

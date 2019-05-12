@@ -1,9 +1,8 @@
 import React, {Component} from "react";
 import PageHeader from "../src/components/visitor/PageHeader";
 import PageMenu from "../src/components/visitor/PageMenu";
-import PageBody from "../src/components/visitor/PageBody";
 import ReduxToPages from "../src/reduxToPages/ReduxToPages";
-import PageFooter from "../src/components/visitor/PageFooter"
+import AccueilBody from "../src/components/tools/pages/accueilBody/AccueilBody"
 
 
 class AccueilPage extends Component{
@@ -23,8 +22,7 @@ class AccueilPage extends Component{
                 <PageMenu
                     menu={menuArray}
                 />
-                <PageBody />
-                <PageFooter/>
+                <AccueilBody />
                 <style jsx>{`
                     .menu{
                         margin: 0px;

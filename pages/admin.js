@@ -22,7 +22,7 @@ class AdminPage extends Component{
                     <script 
                         defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" 
                         integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" 
-                        crossorigin="anonymous">
+                        crossOrigin="anonymous">
                     </script>
                 </Head>
                 <header className="headleft">

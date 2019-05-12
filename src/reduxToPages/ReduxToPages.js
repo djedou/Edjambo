@@ -43,12 +43,12 @@ const ReduxToPages = (Page) => {
                             }
                             @media (max-width: 720px){
                                 body{
-                                    background: url("../../static/img/bg.png") repeat;
+                                    background: url("../../static/img/tablette/bg_tablette.png") repeat;
                                 }   
                             } 
                             .container{
                                 display: grid;
-                                grid-template-columns: 100vw;
+                                grid-template-columns: 98.7vw;
                                 grid-template-rows: 60px 35px auto;
                                 grid-template-areas:"head"
                                                     "menu"
@@ -69,22 +69,23 @@ const ReduxToPages = (Page) => {
                             .menu{
                                 grid-area: menu;
                                 display: grid;
-                                grid-template-columns: 92vw 8vw;
+                                grid-template-columns: 90vw 8.7vw;
                                 grid-template-rows: 45px;
                                 grid-template-areas: "mainMenu profilMenu";
                                 position: sticky;
                                 top: 0px;
+                                z-index: 10;
                             }
                             @media (max-width: 768px){
                                 .menu{
-                                    grid-template-columns: 84vw 15vw;
+                                    grid-template-columns: 84vw 14.7vw;
                                 }
                             }
                             .main{
                                 grid-area: main;
                                 display: flex;
                                 flex-flow: column;
-                                overflow: auto;
+                                justify-content: center;
                             }
                             .mainMenu{
                                 grid-area: mainMenu;
