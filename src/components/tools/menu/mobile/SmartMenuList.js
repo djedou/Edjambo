@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import SmartMenuItem from "./SmartMenuItem";
-import smartImg from "../../../../../static/img/menu.png";
+import smartImg from "../../../../../static/images/menu.png";
 import Link from 'next/link';
 
 class SmartMenuList extends Component{
