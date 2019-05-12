@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 
-import image1 from "../../../../../../static/img/tablette/bg_tablette.png";
-import image2 from "../../../../../../static/img/tablette/edj7_tablette.png";
-import image3 from "../../../../../../static/img/tablette/edj9_tablette.png";
-import image4 from "../../../../../../static/img/tablette/edj10_tablette.png";
-import image5 from "../../../../../../static/img/tablette/edj8_tablette.png";
+import image1 from "../../../../../../static/images/bg_tablette.png";
+import image2 from "../../../../../../static/images/edj7_tablette.png";
+import image3 from "../../../../../../static/images/edj9_tablette.png";
+import image4 from "../../../../../../static/images/edj10_tablette.png";
+import image5 from "../../../../../../static/images/edj8_tablette.png";
 
 class Gallerie extends Component{
     constructor(props){

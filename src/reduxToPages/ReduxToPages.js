@@ -35,7 +35,7 @@ const ReduxToPages = (Page) => {
                             body{
                                 margin: 0;
                                 padding: 0;
-                                background: url("../../static/img/bg.png") no-repeat center fixed;
+                                background: url("../../static/images/bg.png") no-repeat center fixed;
                                 background-size: cover;
                                 -webkit-background-size: cover;
                                 -moz-background-size: cover;
@@ -43,7 +43,7 @@ const ReduxToPages = (Page) => {
                             }
                             @media (max-width: 720px){
                                 body{
-                                    background: url("../../static/img/tablette/bg_tablette.png") repeat;
+                                    background: url("../../static/images/bg_tablette.png") repeat;
                                 }   
                             } 
                             .container{

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Link from 'next/link';
-import smartImg from '../../../../static/img/bg.png'
+import smartImg from '../../../../static/images/bg.png'
 
 class ProfileMenu extends Component{
     constructor(props){

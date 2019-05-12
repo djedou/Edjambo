@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import MenuItem from "./desktop/MenuItem";
-import SmartMenuList from "./mobile/SmartMenuList";
+import SmartMenuList from "./mobile/SmartMenuList"; 
 
 class MenuList extends Component{
     constructor(props){
