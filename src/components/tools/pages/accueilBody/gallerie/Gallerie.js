@@ -1,10 +1,5 @@
 import React, {Component} from "react";
 
-import image1 from "../../../../../../static/images/bg_tablette.png";
-import image2 from "../../../../../../static/images/edj7_tablette.png";
-import image3 from "../../../../../../static/images/edj9_tablette.png";
-import image4 from "../../../../../../static/images/edj10_tablette.png";
-import image5 from "../../../../../../static/images/edj8_tablette.png";
 
 class Gallerie extends Component{
     constructor(props){
@@ -16,11 +11,11 @@ class Gallerie extends Component{
             <div className="gallerieContainer">
                 <div className="slideContainer">
                     <figure>
-                        <img className="image" src={image1} alt="photo1"/>
-                        <img className="image" src={image2} alt="photo2"/>
-                        <img className="image" src={image3} alt="photo3"/>
-                        <img className="image" src={image4} alt="photo4"/> 
-                        <img className="image" src={image5} alt="photo5"/> 
+                        <img className="image" src="../../../../../../static/images/bg_tablette.png" alt="photo1"/>
+                        <img className="image" src="../../../../../../static/images/edj7_tablette.png" alt="photo2"/>
+                        <img className="image" src="../../../../../../static/images/edj9_tablette.png" alt="photo3"/>
+                        <img className="image" src="../../../../../../static/images/edj10_tablette.png" alt="photo4"/> 
+                        <img className="image" src="../../../../../../static/images/edj8_tablette.png" alt="photo5"/> 
                     </figure>
                 </div>
                 <style jsx>{`
