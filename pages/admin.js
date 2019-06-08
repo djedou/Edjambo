@@ -7,7 +7,6 @@ import Head from 'next/head';
 import getConfig from 'next/config';
 const { publicRuntimeConfig } = getConfig();
 
-import smartImg from "../static/img/menu.png";
 
 class AdminPage extends Component{
     constructor(props){
@@ -43,7 +42,7 @@ class AdminPage extends Component{
                 />
                 {/* smartphones start here */}                
                 <header className="smartheadleft">
-                    <img className="menuImg" src={smartImg} alt="logo"/>
+                    <img className="menuImg" src="../static/images/menu.png" alt="logo"/>
                     <ul className="tabList">
                         {adminSmartArray.map(item => {
                             this.showFromSmartMenu = (e) => {
